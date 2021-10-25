@@ -41,7 +41,17 @@ func main() {
 	fmt.Println(cities)
 
 	var ukCities [5]string
+	// short form for arrays but each eliment has to be defined for anything to print
 	ukCities[2] = "Manchester"
 	fmt.Println(ukCities)
+
+	citiesSlice := []string{"London", "Manchester", "Leeds", "Birmingham", "Manchester"}
+	fmt.Println(citiesSlice)
+
+	// Difference between arrays and slice is that the array has a predefined amount whereas the slice does not.
+
+	var citiesVerbose []string
+	citiesVerbose = append(citiesVerbose, "London")
+	fmt.Println(citiesVerbose)
 
 }
