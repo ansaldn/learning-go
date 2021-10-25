@@ -1,5 +1,9 @@
 package main
 
+import (
+	"runtime"
+)
+
 func main() {
 	// welcome := "Hello World again"
 	// var welcome1 string = "hellow world once more"
@@ -19,6 +23,16 @@ func main() {
 		println("You are almost of age to drink")
 	default:
 		println("You are too young to drink")
+
+	}
+
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		println("MacOS")
+	case "linux":
+		println("Linux Based Machine")
+	default:
+		println("Windows")
 
 	}
 
