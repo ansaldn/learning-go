@@ -54,4 +54,13 @@ func main() {
 	citiesVerbose = append(citiesVerbose, "London")
 	fmt.Println(citiesVerbose)
 
+
+	ages := []int{10, 32, 89, 21, 45, 50, 17}
+
+	for i := 0; i < len(ages); i++ {
+		fmt.Println(ages[i])
+	}
+
+	
+
 }
