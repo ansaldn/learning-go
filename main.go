@@ -15,6 +15,8 @@ func main() {
 	switch {
 	case myAge >= 21:
 		println("You are allowed to drink")
+	case myAge <= 21 && myAge >= 18:
+		println("You are almost of age to drink")
 	default:
 		println("You are too young to drink")
 
