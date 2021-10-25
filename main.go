@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"runtime"
 )
 
@@ -35,5 +36,12 @@ func main() {
 		println("Windows")
 
 	}
+
+	cities := [5]string{"London", "Manchester", "Leeds", "Birmingham", "Manchester"}
+	fmt.Println(cities)
+
+	var ukCities [5]string
+	ukCities[2] = "Manchester"
+	fmt.Println(ukCities)
 
 }
