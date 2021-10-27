@@ -61,6 +61,10 @@ func main() {
 		fmt.Println(ages[i])
 	}
 
+	for i := 0; i <= 10; i++ {
+		fmt.Println("Hello World",i)
+	}
+
 	
 
 }
