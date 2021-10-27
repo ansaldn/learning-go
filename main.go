@@ -65,6 +65,14 @@ func main() {
 		fmt.Println("Hello World",i)
 	}
 
-	
+
+	switch {
+	case myAge >= 21:
+		fmt.Println("Go Home")
+	default:
+		fmt.Println("Stay")
+		
+	}
+		
 
 }
