@@ -78,7 +78,8 @@ func main() {
 		
 
 	HelloWorld()
-	simpleMaths(21, "David")
+	simpleIntro(21, "David")
+	simpleMaths(9, 10)
 }
 
 func HelloWorld()  {
@@ -87,9 +88,14 @@ func HelloWorld()  {
 	
 }
 
-func simpleMaths(age int, name string)  {
+func simpleIntro(age int, name string)  {
 	fmt.Println("My name is" , name)
 	fmt.Println("I am", age, "years old")
 
+	
+}
+
+func simpleMaths(a, b int) (int) {
+	return a * a + b
 	
 }
