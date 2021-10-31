@@ -98,6 +98,11 @@ func main() {
 	
 	}
 	fmt.Println(engineer)
+
+	// Calling an interface
+	feEnineer := &feEnineer{Name: "David"}
+	PrintDetails(feEnineer)
+
 }
 
 // First function with no arguments passed through 
@@ -135,4 +140,28 @@ type Project struct {
 	Priority string
 	Technologies []string
 	
+}
+
+func (e Engineer) amendAge() {
+	e.Age += 1
+	
+}
+
+// Interfaces in Go
+type Employee interface {
+	GetName() string
+}
+
+type feEnineer struct {
+
+	Name string
+	
+}
+
+func (e *feEnineer) GetName() string {
+	return "Front End Eningeer Name: " + e.Name
+}
+
+func PrintDetails (e Employee) {
+	fmt.Println(e.GetName())
 }
