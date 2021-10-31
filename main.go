@@ -78,10 +78,18 @@ func main() {
 		
 
 	HelloWorld()
+	simpleMaths(21, "David")
 }
 
 func HelloWorld()  {
 
 	fmt.Println("Hello World")
+	
+}
+
+func simpleMaths(age int, name string)  {
+	fmt.Println("My name is" , name)
+	fmt.Println("I am", age, "years old")
+
 	
 }
