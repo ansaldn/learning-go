@@ -71,6 +71,8 @@ func main() {
 		fmt.Println("Go Home")
 	default:
 		fmt.Println("Stay")
+	
+	fmt.Println(("Hello World, again"))
 		
 	}
 		
