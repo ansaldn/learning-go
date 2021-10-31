@@ -84,7 +84,19 @@ func main() {
 	simpleMaths(9, 10)
 
 	//Calling a struct back in main
-	engineer := Engineer{Name: "David"}
+	// When calling subsruct, use Struct: subScruct {subStruct variable: type}
+	engineer := Engineer{
+		Name: "David",
+		Age: 21,
+		Project: Project{
+			Name: "Learning Go",
+			projectID: 31223133,
+			Technologies: []string{"Go"},
+		},
+
+
+	
+	}
 	fmt.Println(engineer)
 }
 
@@ -112,5 +124,15 @@ func simpleMaths(a, b int) (int) {
 //Struct 
 type Engineer struct {
 	Name string
+	Age int
+	Project Project
+	
+}
+// "substruct as defined by 'Project Projecr' above "
+type Project struct {
+	Name string
+	projectID int
+	Priority string
+	Technologies []string
 	
 }
