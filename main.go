@@ -76,18 +76,26 @@ func main() {
 		
 	}
 		
-
+	// Calling empy function
 	HelloWorld()
+	//Calling function with parameters passed through
 	simpleIntro(21, "David")
+	//Calling function with parameters passed through and output
 	simpleMaths(9, 10)
+
+	//Calling a struct back in main
+	engineer := Engineer{Name: "David"}
+	fmt.Println(engineer)
 }
 
+// First function with no arguments passed through 
 func HelloWorld()  {
 
 	fmt.Println("Hello World")
 	
 }
 
+// Functions with arguments passed through 
 func simpleIntro(age int, name string)  {
 	fmt.Println("My name is" , name)
 	fmt.Println("I am", age, "years old")
@@ -95,7 +103,14 @@ func simpleIntro(age int, name string)  {
 	
 }
 
+// Function with arguments and expected output defined by "return"
 func simpleMaths(a, b int) (int) {
 	return a * a + b
+	
+}
+
+//Struct 
+type Engineer struct {
+	Name string
 	
 }
