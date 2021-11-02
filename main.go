@@ -5,11 +5,18 @@ import (
 	"runtime"
 )
 
+func switchIt(a, b string) {
+	println(a, b)
+
+}
+
 func main() {
 	// welcome := "Hello World again"
 	// var welcome1 string = "hellow world once more"
 	// println(welcome)
 	// println(welcome1)
+
+	switchIt("yes", "no")
 
 	myAge := 21
 
@@ -54,7 +61,6 @@ func main() {
 	citiesVerbose = append(citiesVerbose, "London")
 	fmt.Println(citiesVerbose)
 
-
 	ages := []int{10, 32, 89, 21, 45, 50, 17}
 
 	for i := 0; i < len(ages); i++ {
@@ -62,20 +68,19 @@ func main() {
 	}
 
 	for i := 0; i <= 10; i++ {
-		fmt.Println("Hello World",i)
+		fmt.Println("Hello World", i)
 	}
-
 
 	switch {
 	case myAge >= 21:
 		fmt.Println("Go Home")
 	default:
 		fmt.Println("Stay")
-	
-	fmt.Println(("Testing the waters with new change to directory"))
-		
+
+		fmt.Println(("Testing the waters with new change to directory"))
+
 	}
-		
+
 	// Calling empy function
 	HelloWorld()
 	//Calling function with parameters passed through
@@ -87,15 +92,12 @@ func main() {
 	// When calling subsruct, use Struct: subScruct {subStruct variable: type}
 	engineer := Engineer{
 		Name: "David",
-		Age: 21,
+		Age:  21,
 		Project: Project{
-			Name: "Learning Go",
-			projectID: 31223133,
+			Name:         "Learning Go",
+			projectID:    31223133,
 			Technologies: []string{"Go"},
 		},
-
-
-	
 	}
 	fmt.Println(engineer)
 
@@ -105,46 +107,44 @@ func main() {
 
 }
 
-// First function with no arguments passed through 
-func HelloWorld()  {
+// First function with no arguments passed through
+func HelloWorld() {
 
 	fmt.Println("Hello World")
-	
+
 }
 
-// Functions with arguments passed through 
-func simpleIntro(age int, name string)  {
-	fmt.Println("My name is" , name)
+// Functions with arguments passed through
+func simpleIntro(age int, name string) {
+	fmt.Println("My name is", name)
 	fmt.Println("I am", age, "years old")
 
-	
 }
 
 // Function with arguments and expected output defined by "return"
-func simpleMaths(a, b int) (int) {
-	return a * a + b
-	
+func simpleMaths(a, b int) int {
+	return a*a + b
+
 }
 
-//Struct 
+//Struct
 type Engineer struct {
-	Name string
-	Age int
+	Name    string
+	Age     int
 	Project Project
-	
 }
+
 // "substruct as defined by 'Project Projecr' above "
 type Project struct {
-	Name string
-	projectID int
-	Priority string
+	Name         string
+	projectID    int
+	Priority     string
 	Technologies []string
-	
 }
 
 func (e Engineer) amendAge() {
 	e.Age += 1
-	
+
 }
 
 // Interfaces in Go
@@ -153,15 +153,13 @@ type Employee interface {
 }
 
 type feEnineer struct {
-
 	Name string
-	
 }
 
 func (e *feEnineer) GetName() string {
 	return "Front End Eningeer Name: " + e.Name
 }
 
-func PrintDetails (e Employee) {
+func PrintDetails(e Employee) {
 	fmt.Println(e.GetName())
 }
